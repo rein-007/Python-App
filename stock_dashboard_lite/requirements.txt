@@ -1,0 +1,6 @@
+streamlit
+yfinance
+pandas
+matplotlib
+python-pptx
+textblob
