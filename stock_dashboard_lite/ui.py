@@ -5,8 +5,8 @@ from data_fetcher import fetch_data
 from reporting import export_to_pptx
 
 def run_dashboard():
-    st.set_page_config(page_title="Simple Modular Stock Dashboard", layout="centered")
-    st.title("📊 Simple Modular Stock Dashboard")
+    st.set_page_config(page_title="Stock Dashboard - Lite", layout="centered")
+    st.title("📊 Stock Dashboard - Lite")
 
     ticker = st.selectbox(
         "Select Company:",
@@ -29,4 +29,5 @@ def run_dashboard():
         if st.button("Export Report"):
             folder = "."  # default current folder
             output_file = export_to_pptx(ticker, hist, price, pct_change, folder=folder)
+
             st.success(f"Report saved as {output_file}")
